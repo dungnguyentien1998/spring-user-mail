@@ -1,0 +1,24 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: ms-mail
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic:
+      userCreated: USER_CREATED_TOPIC
+    consumer:
+      group-id: ms_mail_consumer
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: dung.nguyentien1998@gmail.com
+    password: Tiendung1098
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: ms-config-server

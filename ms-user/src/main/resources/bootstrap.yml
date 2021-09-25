@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ms-user
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic:
+      userCreated: USER_CREATED_TOPIC
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: ms-config-server
