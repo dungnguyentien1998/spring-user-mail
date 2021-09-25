@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: native
+    active: git
 ---
 spring:
   profiles: native
@@ -18,8 +18,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/isilona/microservices/
+          uri: https://github.com/dungnguyentien1998/spring-user-mail/
           search-paths:
             - "ms-config-properties/{application}/{profile}"
             - "ms-config-properties/global/{profile}"
+            - "ms-config-properties/ms-gateway/{profile}"
+            - "ms-config-properties/ms-mail/{profile}"
+            - "ms-config-properties/ms-user/{profile}"
 
